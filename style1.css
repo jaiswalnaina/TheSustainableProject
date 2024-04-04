@@ -1,0 +1,706 @@
+/* Create a top navigation bar with a black background color  */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0vw 0vw 0vw 0vw;
+}
+
+.topnav {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  align-items: center;
+  text-align: center;
+  padding: 1vw 1vw 0vw 1vw;
+  text-decoration: none;
+  font-size: 1vw;
+  font-family: "Lato", sans-serif;
+}
+
+/* Change the color of links on hover
+.topnav a:hover {
+  background-color: #c8102e;
+  color: C8102E;
+} */
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #000000;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+/* Create a logo inside the navbar */
+.logo-image img {
+  width: 3vw;
+  height: 3vw;
+  overflow: hidden;
+  margin-top: -6px;
+}
+
+.title {
+  padding: 0 10vw 3vw 10vw;
+}
+
+/* Create typography hierachy*/
+h1 {
+  font-family: "Lato";
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 5vw;
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+
+h2 {
+  font-family: "Lato";
+  font-size: 2.7vw;
+  font-weight: 500;
+  font-style: normal;
+  hyphens: none;
+}
+
+h3 {
+  font-family: "Lato";
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: lighter;
+  hyphens: none;
+}
+
+h4 {
+  font-family: "Lato";
+  font-size: 3.5vw;
+  font-style: normal;
+  font-weight: 700;
+  font-weight: medium;
+  hyphens: none;
+  margin: 0px;
+}
+
+p {
+  font-family: "Lato";
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: lighter;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+}
+
+h5 {
+  font-family: "Lato";
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: medium;
+  hyphens: none;
+}
+
+h6 {
+  color: #333333;
+  font-family: "Lato";
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: normal;
+  font-style: italic;
+  text-align: center;
+}
+
+
+.body1 {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.4vw;
+  font-weight: lighter;
+  font-style: normal;
+  line-height: auto; /* 128% */
+  text-align: center;
+}
+
+.body2 {
+  color: #000000;
+  font-family: "Lato";
+  font-size: 2vw;
+  font-style: light;
+  font-weight: 400;
+  line-height: normal;
+}
+
+figcaption {
+  color: #333333;
+  font-family: "Lato";
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: normal;
+  padding-top: .8vw;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  font-family: "Lato";
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: medium;
+  padding: 0px 0px 0px 10vw;
+  position: absolute;
+  bottom: 5vw;
+  text-align: left;
+  hyphens: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.two-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5vw 0vw 5vw 0vw;
+}
+
+.description-left {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4vw 4vw 4vw 10vw;
+  width: 150vw;
+}
+
+.description-right {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2vw 2vw 5vw 2vw;
+}
+
+.quote-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0vw 20vw 3vw 20vw;
+  width:100%;
+  box-sizing: border-box;
+}
+
+.body-left {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2vw 4vw 10vw 4vw;
+}
+
+.body-right {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2vw 4vw 10vw 4vw;
+}
+
+a {
+  color: #000000;
+  font-family: "Lato";
+  font-size: 1.4vw;
+  font-weight: 800;
+  font-style: bold;
+  text-align: center;
+  padding-top: 3vw;
+}
+.picture{
+  display: flex;
+  padding: 0vw 3vw 4vw 4vw;
+  width: 170vw;
+}
+
+.picture-no-padding{
+  display: flex;
+  width: 170vw;
+}
+
+.text-padding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 4vw;
+}
+
+.red-bg {
+  display: flex;
+  flex-direction: column;
+  background-color: #c6112e;
+  width: 100%;
+  color: #f2f2f2;
+  padding-bottom: 5vw;
+}
+
+.mutiple-columns {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 2vw 20vw 0vw 20vw;
+  color: #f2f2f2;
+}
+
+.three-columns{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 2vw 20vw 4vw 20vw;
+  color: #f2f2f2;
+}
+
+
+.one-column-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.one-column-text-black{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+}
+
+.one-column-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0vw 4vw 0vw 4vw;
+}
+
+img {
+  max-width: 100%;
+}
+
+.center-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 5vw;
+}
+
+.two-column-text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0vw 2vw 0vw 2vw;
+}
+
+.red-bg-headings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #c6112e;
+  padding: 4vw 2vw 4vw 0vw;
+}
+
+.heading2-caption {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10vw;
+  padding-right: 2vw;
+  width: 100vw;
+  color: #f2f2f2;
+}
+
+.heading3-caption {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5vw;
+  padding-right: 3vw;
+  width: 100vw;
+  color: #f2f2f2;
+}
+
+.line {
+  width: 30vw;
+  border: 1px solid #000000;
+  margin: 3px;
+  display: inline-block;
+}
+
+.line-red {
+  width: 100px;
+  border: 6px solid #c6112e;
+  margin: 3px;
+  display: inline-block;
+}
+
+.line-red-middle {
+  display: flex;
+  width: 200px;
+  border: 6px solid #c6112e;
+  margin: 3px;
+}
+
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-text {
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1.5vw;
+}
+
+.icon-img {
+  display: flex;
+  width: 2vw;
+}
+
+.black-bgr {
+  background-color: #000000;
+  color: #f2f2f2;
+  padding: 3vw 5vw 3vw 5vw;
+}
+
+.spotlight {
+  position: relative;
+  text-align: left;
+  color: white;
+}
+
+.intext-bottom-left {
+  position: absolute;
+  bottom: 3vw;
+  left: 10vw;
+  padding-right: 60vw;
+}
+
+.center-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0vw 20vw 2vw 20vw;
+}
+
+/* spotlight banner transparancy */
+#show_bg_1 {
+  background-image: linear-gradient(
+      to right,
+      #000000,
+      hsla(0, 2%, 10%, 0.914),
+      hsla(0, 3%, 15%, 0.14)
+    ),
+    url(image/STIMSON+NEU+ISEC-4393_dwn.jpg);
+  object-fit: cover;
+  object-position: bottom 10%;
+  width: 100%;
+  height: 23vw;
+  background-size: cover;
+  color: white;
+  padding: 0vw;
+}
+
+.image-box {
+  padding: 4vw 0vw 3vw 4vw;
+}
+
+label {
+  color: #fff;
+  text-align: center;
+  font-family: "Lato";
+  font-size: 1.3vw;
+  font-style: bold;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+
+/* get involved section below */
+.getinvolved {
+  background-color: #c8102e;
+  padding: 3vw 15vw 3vw 15vw;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Field input*/
+input[type="text"] {
+  width: 28vw;
+  height: 4vw;
+  padding: 1vw 1vw;
+  margin: 1vw 0vw 1vw 0vw;
+  box-sizing: border-box;
+  border: none;
+  border-radius: .5vw;
+  background-color: #f8f8f8;
+  font-size: 1.2vw;
+}
+
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+/* text area */
+.textarea {
+  width: 62vw;
+  height: 8vw;
+  padding: 1vw 1vw;
+  margin: 1vw 1vw 1vw 0vw;
+  box-sizing: border-box;
+  border: none;
+  border-radius: .5vw;
+  background-color: #f8f8f8;
+  font-style: "Lato";
+  font-size: 1.2vw;
+  resize: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* i want to be a part button */
+button[type="button"],
+button[type="submit"],
+button[type="reset"] {
+  background-color: #000000;
+  border: none;
+  width: 17vw;
+  height: 4vw;
+  border-radius: .5vw;
+  font-family: "Lato";
+  font-size: 1.2vw;
+  text-decoration: none;
+  margin: auto auto;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.buttontext {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2vw;
+  margin-left: 2.2vw;
+  font-weight: lighter;
+  font-style: normal;
+  line-height: auto; /* 128% */
+  text-align: center;
+}
+
+/*container*/
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  background: var(--NeU-Red, #c8102e);
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+  justify-content: space-between;
+}
+
+/*radiobutton*/
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5vw;
+  width: 1.5vw;
+  margin-right: .5vw;
+  background-color: #eee;
+  border-radius: 50%;
+  border-color: #000;
+}
+
+.container1 {
+  display: inline;
+  position: relative;
+  padding-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 5vw;
+  cursor: pointer;
+  font-size: 1.2vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+  background-color: white;
+  border-color: black;
+}
+/* When the radio button is checked, add a red background */
+.container1 input:checked ~ .checkmark {
+  background-color: white;
+  border-color: black;
+  border-width: 2vw;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: inline;
+  border-color: black;
+}
+
+/* Style the indicator (dot/circle) */
+.container1 .checkmark:after {
+  top: 0.26vw;
+  left: 0.25vw;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: black;
+}
+
+.options {
+  margin-bottom: 3.5vw;
+  margin-top: .7vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0vw 5vw 0vw 5vw;
+}
+
+.tableauPlaceholderCenter{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1vw 0vw 3vw 0vw;
+}
+
+.tableauPlaceholderCenter2{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0vw 0vw 0vw 0vw;
+}
+
+.tableauViz {
+  display: flex;
+  justify-content: center;
+}
+
+.interactive_graph{
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 2vw 1vw 2vw;
+  width: fit-content;
+  height: fit-content;
+  overflow: visible;
+}
+
+.body-red-bold {
+  color: #c8102e;
+  font-family: "Lato";
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0px 0px 0px 10vw;
+  position: absolute;
+  bottom: 5vw;
+  text-align: left;
+  hyphens: none;
+}
